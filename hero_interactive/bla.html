@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    li {
+      font-size: 2em;
+        color: goldenrod
+    }
+    .done {
+        color: grey;
+      text-decoration: line-through;
+    }
+      p img {
+          width: 19%;
+      }
+      .fade {
+          animation: catfade 1s ease forwards;
+      }
+      @keyframes catfade{
+          to{opacity: 0;}
+      }
+      
+  </style>
+</head>
+
+<body>
+ <ul>
+
+   <li>Go home</li>
+   <li>Lunch</li>
+   <li>Print CVs</li>
+   <li>Send CVs</li>
+   <li>Rus</li>
+   <li>Tea</li>
+   <li>Sleep</li>
+   <li>DO JS</li>
+   <li>Be happy</li>
+ </ul>
+
+    <p>
+        <img src="75552.ngsversion.1422285553360.adapt.1900.1.jpg" alt="">
+        <img src="annoyed-cat.jpg" alt="">
+        <img src="cats-politics-TN.jpg" alt="">
+        <img src="iStock-471504573.jpg" alt ="">
+        <img src="small-kitten-meowing.jpg" alt="">
+    </p>
+    <audio controls>
+        <source src="Meowing-cat.mp3" type="audio/mpeg">
+    </audio>
+    
+  <script>
+  let toDoTasks = document.querySelectorAll("li");
+    toDoTasks.forEach(addClass);
+
+    function addClass(oneTaskAtATime, index){
+     oneTaskAtATime.addEventListener('click', taskClicked);
+    }
+
+    function taskClicked(event){
+      console.log(event.target);
+      event.target.classList.toggle("done");
+    }
+      
+      //****************
+    let cats = document.querySelectorAll("img");
+      let catsClicked=0;
+      cats.forEach(addCatClass);
+      
+      function addCatClass(oneCat, index){
+          oneCat.addEventListener('click', catClicked);
+      }
+      
+      function catClicked (event){
+          console.log(event.target);
+          event.target.classList.toggle("fade");
+          catsClicked++;
+          if(catsClicked==3){
+              let catSound = document.querySelector("audio")
+              catSound.play()
+          }
+      }
+      
+      //**********************
+      
+      
+      
+  </script>
+
+
+
+
+
+</body>
+</html>

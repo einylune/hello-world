@@ -1,0 +1,132 @@
+div {
+    width: 1000px;
+    height: 500px;
+    background: white;
+    background-image: url(10008.jpg);
+    position: absolute;
+}
+
+/*#Cat {
+    padding-top: 70px;
+    padding-left: 40px; */
+
+#Cat {
+    padding-top: 260px;
+    padding-left: 400px;
+    z-index: 1;
+}
+
+#Bear {
+    opacity: 0;
+    padding-top: 100px;
+    padding-left: 200px;
+    z-index: 2;
+}
+
+#Multi {
+    width: 80px;
+    position: absolute;
+    left: 35vw;
+	top: 55vh;
+    z-index: 3;
+}
+
+#Green {
+    width: 80px;
+    position: absolute;
+    left: 44vw;
+	top: 47vh;
+    z-index: 4;
+}
+
+#Red {
+    width: 80px;
+position: absolute;  
+left: 28vw;
+	top: 54vh;
+    z-index: 5;
+}
+
+.fade{
+    animation: catFade 1s ease forwards;
+}
+      @keyframes catFade{
+          to {opacity: 0;}
+}
+
+
+.shakeCat{
+    animation: shakeCat 0.1s infinite;
+}
+
+@keyframes shakeCat{
+    25% { transform: translateX(-2px);}
+    75% { transform: translateX(2px);}
+}
+
+
+.jumpOneCat{
+    animation: jumpOneCat .5s ease alternate;
+}
+@keyframes jumpOneCat{
+    to { transform: translateY(-80px);
+    }
+}
+
+.swingCat{
+    animation: swingCat 1.5s ease-in-out;
+    animation-iteration-count: 3;
+}
+@keyframes swingCat{
+   /* 10% {transform: translate(7px, -7px);}*/
+    25% {transform: translate(20px, -20px);}
+   /* 40% {transform: translate(7px, -7px);}*/
+    50% {transform: translate(0px, 0px);}
+   /* 60% {transform: translate(-7px, -7px);}*/
+    75% {transform: translate(-20px, -20px);}
+   /* 90% {transform: translate(-7px, -7px);}*/
+    100% {transform: translate(0px, 0px);
+    }
+}
+
+.jumpingCat{
+    animation: jumpingCat 1.5s ease-in alternate forwards;
+}
+@keyframes jumpingCat{
+    25%{ transform: translate(35px,-45px);}
+    50%{ transform: translate(70px, 0px);}
+    75%{ transform: translate(105px,-45px);}
+    100%{ transform: translate(140px, 0px);
+    }
+}
+/*******************************/
+.shotCat{
+    animation: bearFade 4s ease forwards;
+      }
+
+      @keyframes bearFade{
+          from{opacity: 0}
+          to{opacity: 1;
+          }
+      }
+
+.shootCat{
+    animation: giftFade 4s ease forwards;
+      }
+
+      @keyframes giftFade{
+          from{opacity: 0}
+          to{opacity: 1;
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
